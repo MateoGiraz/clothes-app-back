@@ -16,21 +16,23 @@ type Outfit struct {
 	ShoesId int8	
 }
 
-######################################## SQL SCRIPTS ############################################
+################################ SQL CREATION SCRIPTS ###################################
 
-CREATE TABLE clothes (
+CREATE TABLE clothing (
   id BIGSERIAL, 
   is_available BOOLEAN, 
   name VARCHAR, 
   description VARCHAR, 
-  color VARCHAR, 
-  category 
-  VARCHAR
+  color VARCHAR,
+  image_url VARCHAR,
+  category VARCHAR
 );
 
-CREATE TABLE outfits (
+CREATE TABLE outfit (
   id BIGSERIAL, 
   top_id NUMERIC, 
   pants_id NUMERIC, 
   shoes_id NUMERIC
 );
+
+################################ SQL INSERTION SCRIPTS ###################################

@@ -6,5 +6,6 @@ type Clothing struct {
 	Name        string
 	Description string
 	Color       string
+	ImageURL		string
 	Category    string
 }

@@ -7,6 +7,7 @@ is_available,
 name,
 description,
 color,
+image_url,
 category
 FROM clothing
 ORDER BY id;`
@@ -18,6 +19,7 @@ is_available,
 name,
 description,
 color,
+image_url,
 category
 FROM clothing
 WHERE id = $1;`
@@ -31,9 +33,10 @@ const CreateClothing = `INSERT INTO clothing (
   name,
   description,
   color,
+  image_url,
   category
 ) VALUES (
-  $1, $2, $3, $4, $5
+  $1, $2, $3, $4, $5, $6
 )
 RETURNING id;`
 

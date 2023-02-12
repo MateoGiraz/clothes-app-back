@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "ff2f71f2-754a-4549-88c5-0dd8b1b40d1b",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/clothes",
+    "url": "http://localhost:3000/clothes",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-02-12T04:58:56.479Z",
+    "modified": "2023-02-12T04:58:56.479Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

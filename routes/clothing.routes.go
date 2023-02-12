@@ -33,7 +33,16 @@ func GetClothesHandler(w http.ResponseWriter, r *http.Request) {
 	for rows.Next() {
 		var c models.Clothing
 
-		err := rows.Scan(&c.Id, &c.IsAvailable, &c.Name, &c.Description, &c.Color, &c.Category)
+		err := rows.Scan(
+			&c.Id, 
+			&c.IsAvailable, 
+			&c.Name, 
+			&c.Description, 
+			&c.Color, 
+			&c.ImageURL, 
+			&c.Category,
+		)
+
 		if err != nil {
 			w.Write([]byte(fmt.Sprintf("err: %s", err)))
 			w.WriteHeader(http.StatusNotFound)
@@ -59,7 +68,16 @@ func GetClothingHandler(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	row := db.DB.QueryRow(querys.GetClothing, params["id"])
 
-	err := row.Scan(&c.Id, &c.IsAvailable, &c.Name, &c.Description, &c.Color, &c.Category)
+	err := row.Scan(
+		&c.Id,
+		&c.IsAvailable, 
+		&c.Name, 
+		&c.Description, 
+		&c.Color, 
+		&c.ImageURL, 
+		&c.Category,
+	)
+
 	if err != nil {
 		w.WriteHeader(http.StatusNotFound)
 		w.Write([]byte("Clothing not found"))
@@ -81,6 +99,7 @@ func CreateClothing(w http.ResponseWriter, r *http.Request) {
 		c.Name,
 		c.Description,
 		c.Color,
+		c.ImageURL,
 		c.Category,
 	)
 
@@ -105,7 +124,16 @@ func DeleteClothing(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	row := db.DB.QueryRow(querys.GetClothing, params["id"])
 
-	err := row.Scan(&c.Id, &c.IsAvailable, &c.Name, &c.Description, &c.Color, &c.Category)
+	err := row.Scan(
+		&c.Id, 
+		&c.IsAvailable, 
+		&c.Name, 
+		&c.Description, 
+		&c.Color, 
+		&c.ImageURL, 
+		&c.Category,
+	)
+	
 	if err != nil {
 		w.WriteHeader(http.StatusNotFound)
 		w.Write([]byte("Clothing not found"))

@@ -14,7 +14,7 @@ const (
 	port     = 5432
 	user     = "postgres"
 	password = "secret"
-	dbname   = "clothes-app"
+	dbname   = "clothesapp"
 	sslmode  = "disable"
 )
 
@@ -26,7 +26,7 @@ func Connect() {
 
 	var err error
 	DB, err = sql.Open("postgres", psqlInfo)
-
+	
 	if err != nil {
 		panic(err)
 	}

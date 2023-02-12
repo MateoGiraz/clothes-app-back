@@ -33,7 +33,13 @@ func GetOutfitsHandler(w http.ResponseWriter, r *http.Request) {
 	for rows.Next() {
 		var o models.Outfit
 
-		err := rows.Scan(&o.Id, &o.TopId, &o.PantsId, &o.ShoesId)
+		err := rows.Scan(
+			&o.Id, 
+			&o.TopId, 
+			&o.PantsId,
+			&o.ShoesId,
+		)
+
 		if err != nil {
 			w.Write([]byte(fmt.Sprintf("err: %s", err)))
 			w.WriteHeader(http.StatusNotFound)
@@ -59,7 +65,13 @@ func GetOutfitHandler(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	row := db.DB.QueryRow(querys.GetOutfit, params["id"])
 
-	err := row.Scan(&o.Id, &o.TopId, &o.PantsId, &o.ShoesId)
+	err := row.Scan(
+		&o.Id, 
+		&o.TopId, 
+		&o.PantsId, 
+		&o.ShoesId,
+	)
+
 	if err != nil {
 		w.WriteHeader(http.StatusNotFound)
 		w.Write([]byte("Outfit not found"))
@@ -74,6 +86,8 @@ func CreateOutfit(w http.ResponseWriter, r *http.Request) {
 	var o models.Outfit
 
 	json.NewDecoder(r.Body).Decode(&o)
+
+	//is every id valid???
 
 	row := db.DB.QueryRow(
 		querys.CreateOutfit,
@@ -103,7 +117,13 @@ func DeleteOutfit(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	row := db.DB.QueryRow(querys.GetOutfit, params["id"])
 
-	err := row.Scan(&o.Id, &o.TopId, &o.PantsId, &o.ShoesId)
+	err := row.Scan(
+		&o.Id, 
+		&o.TopId, 
+		&o.PantsId, 
+		&o.ShoesId,
+	)
+
 	if err != nil {
 		w.WriteHeader(http.StatusNotFound)
 		w.Write([]byte("Outfit not found"))
