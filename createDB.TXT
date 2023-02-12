@@ -35,4 +35,3 @@ CREATE TABLE outfit (
   shoes_id NUMERIC
 );
 
-################################ SQL INSERTION SCRIPTS ###################################

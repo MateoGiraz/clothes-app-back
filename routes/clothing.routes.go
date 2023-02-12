@@ -11,7 +11,7 @@ import (
 	"github.com/matoegiraz/clothes-app/models"
 )
 
-func handleClothesRouting(r *mux.Router) {
+func handleClothingRouting(r *mux.Router) {
 	r.HandleFunc("", CreateClothing).Methods("POST")
 	r.HandleFunc("/{id}", DeleteClothing).Methods("DELETE")
 	r.HandleFunc("", GetClothesHandler).Methods("GET")

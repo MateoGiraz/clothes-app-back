@@ -82,12 +82,63 @@ func GetOutfitHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(&o)
 }
 
+func isValidClothingId(id int8, cat string) (err error){
+	var c models.Clothing
+	row := db.DB.QueryRow(querys.GetClothing, id)
+
+	err = row.Scan(
+		&c.Id,
+		&c.IsAvailable, 
+		&c.Name, 
+		&c.Description, 
+		&c.Color, 
+		&c.ImageURL, 
+		&c.Category,
+	)
+
+	if err != nil {
+		return err
+	}
+
+	if c.Category != cat {
+		return fmt.Errorf("category does not match with %s", cat)
+	}
+
+	return nil
+}
+
 func CreateOutfit(w http.ResponseWriter, r *http.Request) {
 	var o models.Outfit
 
 	json.NewDecoder(r.Body).Decode(&o)
 
-	//is every id valid???
+	var err error
+	err	= isValidClothingId(o.TopId, "top")
+
+	if err != nil {
+		w.WriteHeader(http.StatusNotFound)
+		w.Write([]byte(fmt.Sprintf("Top id err: %s", err)))
+
+		return
+	}
+
+	err = isValidClothingId(o.PantsId, "pants")
+
+	if err != nil {
+		w.WriteHeader(http.StatusNotFound)
+		w.Write([]byte(fmt.Sprintf("Pants id err: %s", err)))
+
+		return
+	}
+
+	err = isValidClothingId(o.ShoesId, "shoes")
+
+	if err != nil {
+		w.WriteHeader(http.StatusNotFound)
+		w.Write([]byte(fmt.Sprintf("Shoes id err: %s", err)))
+
+		return
+	}
 
 	row := db.DB.QueryRow(
 		querys.CreateOutfit,
@@ -97,7 +148,7 @@ func CreateOutfit(w http.ResponseWriter, r *http.Request) {
 	)
 
 	var id int64
-	err := row.Scan(&id)
+	err = row.Scan(&id)
 
 	if err != nil {
 		w.WriteHeader(http.StatusNotFound)

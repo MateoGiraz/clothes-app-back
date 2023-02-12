@@ -8,7 +8,7 @@ dropdb:
 	docker exec -it postgres-clothes dropdb -U postgres clothesapp
 
 postgres-terminal:
-	docker exec -it postgres-clothes psql -U postgres
+	docker exec -it postgres-clothes psql -U postgres clothesapp
 
-.PHONY: postgres createdb dropdb postgres-terminal
+.PHONY: postgres createdb dropdb postgres-terminal 
 

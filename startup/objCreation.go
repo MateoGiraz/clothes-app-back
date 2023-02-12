@@ -23,7 +23,7 @@ func CreateColors() []models.AvailableColorType {
 	return modelColors
 }
 
-func CreateClothes() []models.AvailableClothesType {
+func CreateClothingType() []models.AvailableClothesType {
 	stringClothes := []string{
 		"t-shirts",
 		"shirts",
