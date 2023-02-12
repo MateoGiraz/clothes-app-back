@@ -1,0 +1,36 @@
+######################################## MODELS ############################################
+
+type Clothing struct {
+	Id          int8
+	IsAvailable bool
+	Name        string
+	Description string
+	Color       string
+	Category    string
+}
+
+type Outfit struct {
+	Id      int8
+	TopId 	int8
+	PantsId int8
+	ShoesId int8	
+}
+
+######################################## SQL SCRIPTS ############################################
+
+CREATE TABLE clothes (
+  id BIGSERIAL, 
+  is_available BOOLEAN, 
+  name VARCHAR, 
+  description VARCHAR, 
+  color VARCHAR, 
+  category 
+  VARCHAR
+);
+
+CREATE TABLE outfits (
+  id BIGSERIAL, 
+  top_id NUMERIC, 
+  pants_id NUMERIC, 
+  shoes_id NUMERIC
+);
