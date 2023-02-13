@@ -4,16 +4,16 @@
     "colId": "85a691c7-553f-48e3-9093-aa8372698092",
     "containerId": "",
     "name": "POSTING2",
-    "url": "http://localhost:3000/clothes",
+    "url": "http://localhost:2000/clothing",
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-02-12T04:47:43.804Z",
-    "modified": "2023-02-12T16:09:54.979Z",
+    "modified": "2023-02-13T02:16:56.674Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n\t\"IsAvailable\" : false,\n\t\"Name\"        : \"name2\",\n\t\"Description\" : \"d2\",\n\t\"Color\"       : \"red\",\n\t\"ImageURL\"\t\t: \"\",\n\t\"Category\"    : \"top\"\n}",
+      "raw": "{\n\t\"IsAvailable\" : false,\n\t\"Name\"        : \"name2\",\n\t\"Description\" : \"d2\",\n\t\"Color\"       : \"red\",\n\t\"ImageURL\"\t\t: \"https://f.fcdn.app/imgs/737c2f/www.zooko.com.uy/zoo/9fff/original/catalogo/NKDO8891-030-1/460x460/buzo-nike-trend-fleece-crew-sweatshirt-gray.jpg\",\n\t\"Category\"    : \"top\"\n}",
       "form": []
     },
     "tests": []
@@ -23,16 +23,16 @@
     "colId": "85a691c7-553f-48e3-9093-aa8372698092",
     "containerId": "",
     "name": "POSTING3",
-    "url": "http://localhost:3000/outfits",
+    "url": "http://localhost:2000/clothing",
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-02-12T04:47:49.137Z",
-    "modified": "2023-02-12T16:10:00.448Z",
+    "modified": "2023-02-13T02:17:58.329Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n\t\"IsAvailable\" : false,\n\t\"Name\"        : \"name3\",\n\t\"Description\" : \"d3\",\n\t\"Color\"       : \"yellow\",\n\t\"ImageURL\"\t\t: \"\",\n\t\"Category\"    : \"pants\"\n}",
+      "raw": "{\n\t\"IsAvailable\" : false,\n\t\"Name\"        : \"name3\",\n\t\"Description\" : \"d3\",\n\t\"Color\"       : \"yellow\",\n\t\"ImageURL\"\t\t: \"https://f.fcdn.app/imgs/737c2f/www.zooko.com.uy/zoo/9fff/original/catalogo/NKDO8891-030-1/460x460/buzo-nike-trend-fleece-crew-sweatshirt-gray.jpg\",\n\t\"Category\"    : \"pants\"\n}",
       "form": []
     },
     "tests": []
@@ -42,16 +42,16 @@
     "colId": "85a691c7-553f-48e3-9093-aa8372698092",
     "containerId": "",
     "name": "POSTING4",
-    "url": "http://localhost:3000/clothes",
+    "url": "http://localhost:2000/clothing",
     "method": "POST",
     "sortNum": 40000,
     "created": "2023-02-12T04:47:50.788Z",
-    "modified": "2023-02-12T16:10:03.904Z",
+    "modified": "2023-02-13T02:18:12.338Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n\t\"IsAvailable\" : false,\n\t\"Name\"        : \"name4\",\n\t\"Description\" : \"d4\",\n\t\"Color\"       : \"yellow\",\n\t\"ImageURL\"\t\t: \"\",\n\t\"Category\"    : \"pants\"\n}",
+      "raw": "{\n\t\"IsAvailable\" : false,\n\t\"Name\"        : \"name4\",\n\t\"Description\" : \"d4\",\n\t\"Color\"       : \"yellow\",\n\t\"ImageURL\"\t\t: \"https://f.fcdn.app/imgs/737c2f/www.zooko.com.uy/zoo/9fff/original/catalogo/NKDO8891-030-1/460x460/buzo-nike-trend-fleece-crew-sweatshirt-gray.jpg\",\n\t\"Category\"    : \"pants\"\n}",
       "form": []
     },
     "tests": []
@@ -61,16 +61,16 @@
     "colId": "85a691c7-553f-48e3-9093-aa8372698092",
     "containerId": "",
     "name": "POSTING5",
-    "url": "http://localhost:3000/clothes",
+    "url": "http://localhost:2000/clothing",
     "method": "POST",
     "sortNum": 50000,
     "created": "2023-02-12T04:47:52.220Z",
-    "modified": "2023-02-12T16:10:08.348Z",
+    "modified": "2023-02-13T02:17:42.148Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n\t\"IsAvailable\" : false,\n\t\"Name\"        : \"name5\",\n\t\"Description\" : \"d5\",\n\t\"Color\"       : \"brown\",\n\t\"ImageURL\"\t\t: \"\",\n\t\"Category\"    : \"shoes\"\n}",
+      "raw": "{\n\t\"IsAvailable\" : false,\n\t\"Name\"        : \"name5\",\n\t\"Description\" : \"d5\",\n\t\"Color\"       : \"brown\",\n\t\"ImageURL\"\t\t: \"https://f.fcdn.app/imgs/737c2f/www.zooko.com.uy/zoo/9fff/original/catalogo/NKDO8891-030-1/460x460/buzo-nike-trend-fleece-crew-sweatshirt-gray.jpg\",\n\t\"Category\"    : \"shoes\"\n}",
       "form": []
     },
     "tests": []
@@ -80,16 +80,16 @@
     "colId": "85a691c7-553f-48e3-9093-aa8372698092",
     "containerId": "",
     "name": "POSTING6",
-    "url": "http://localhost:3000/clothes",
+    "url": "http://localhost:2000/clothing",
     "method": "POST",
     "sortNum": 60000,
     "created": "2023-02-12T04:47:53.604Z",
-    "modified": "2023-02-12T16:10:11.783Z",
+    "modified": "2023-02-13T02:18:10.121Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n\t\"IsAvailable\" : false,\n\t\"Name\"        : \"name6\",\n\t\"Description\" : \"d6\",\n\t\"Color\"       : \"black\",\n\t\"ImageURL\"\t\t: \"\",\n\t\"Category\"    : \"shoes\"\n}",
+      "raw": "{\n\t\"IsAvailable\" : false,\n\t\"Name\"        : \"name6\",\n\t\"Description\" : \"d6\",\n\t\"Color\"       : \"black\",\n\t\"ImageURL\"\t\t: \"https://f.fcdn.app/imgs/737c2f/www.zooko.com.uy/zoo/9fff/original/catalogo/NKDO8891-030-1/460x460/buzo-nike-trend-fleece-crew-sweatshirt-gray.jpg\",\n\t\"Category\"    : \"shoes\"\n}",
       "form": []
     },
     "tests": []

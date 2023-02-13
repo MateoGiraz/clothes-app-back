@@ -12,5 +12,5 @@ func main() {
 
 	db.Connect()
 
-	http.ListenAndServe(":3000", r)
+	http.ListenAndServe(":2000", r)
 }
